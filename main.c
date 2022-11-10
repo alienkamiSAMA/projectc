@@ -1,32 +1,20 @@
-#include <stdio.h>
-#include <string.h>
-#include"observateur.h"
-int ajouter(char *, observateur );
-int modifier( char *, int, observateur);
-int supprimer(char *, int );
-observateur chercher(char *, int);
-
+#include "electorale.h"
+#include<stdio.h>
 int main()
 {
-    observateur o1= {"ali","5me5em",31,05,1999,1456,1,"tunisien","journaliste"},o2= {"Maryem","Ep.5me5em",27,04,1999,1234,2,"algerienne","ingenieure",},o3;
-    int x=ajouter("observateur.txt", o1);
-    /*
-    if(x==1)
-        printf("\najout d'observateur avec succés");
-    else printf("\nechec ajout");
-        */
-    x=modifier("observateur.txt",1,o2 );
 
-    if(x==1)
-        printf("\nModification d'observateur avec succés");
-    else printf("\nechec Modification");
-    x=supprimer("observateur.txt",1 );
-    if(x==1)
-        printf("\nSuppression d'observateur avec succés");
-    else printf("\nechec Suppression");
-    o3=chercher("observateur.txt",3);
-    if(o3.idf==-1)
-        printf("introuvable");
-return 0;
-    
+electorale e1={1234,"homme","gauche",0000,5980,8901,4070,1,2,2022} ;
+electorale e2={1356,"femme","droit",1111,1200,8985,4858,8,8,2022} ;
+
+
+
+int x=ajouter (e1 ,"liselect.txt");
+if(e1.id_tete==-1)
+ printf("inexistant");
+else
+ printf("%d %s %s %d %d %d %d %d %d %d\n",e1.id_liste,e1.genre,e1.orientation,e1.id_tete,e1.id1,e1.id2,e1.id3,e1.d.j,e1.d.m,e1.d.a);
 }
+
+
+
+
